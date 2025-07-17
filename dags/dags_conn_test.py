@@ -35,14 +35,9 @@ with DAG(
     t8 = EmptyOperator(  
         task_id="t8")
     
+    t9 = EmptyOperator(
+        task_id="t9")
     
     t1 >> [t2, t3] >> t4
     t5 >> t4
-    [t4,t7] >>t6 >> t8
-    
-    
-    
-    
-    
-
-    bash_t1 >> bash_t2
+    [t4,t7] >>t6 >> t8 >> t9
