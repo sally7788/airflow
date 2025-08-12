@@ -3,7 +3,8 @@ import pendulum
 from airflow.providers.standard.operators.python import PythonOperator
 from airflow.sdk import DAG, chain
 import random 
-
+from common.common_func import get_sftp  # Importing the function from common_func.py
+#plugins를 쓰면 안됨. 
 with DAG(
     dag_id="dags_python_import_func",
     schedule="30 6 * * *", # 분, 시, 일, 월, 요일 
